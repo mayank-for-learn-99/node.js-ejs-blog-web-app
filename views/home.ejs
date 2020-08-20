@@ -5,11 +5,12 @@
 <%homeBlogContent.forEach(function(post){ %>
 <!--      <%# console.log(post.blogTitle) %>
      <%# console.log(post.blogContent) %> -->
-     <% let title =  post.blogTitle %> 
-     <% let content = post. blogContent %> 
-    <h2><%=title%></h2>
-    <p><%=content.substring(0,100) + ' ...' %>
-          <a href='posts/:<%=title%>'>Read More</a>
+     <% let btitle =  post.title %> 
+     <% let bcontent = post. content %> 
+    <h2><%=btitle%></h2>
+    <p><%=bcontent.substring(0,100) + ' ...' %>
+      <%#console.log(post._id)%>
+          <a href='posts/<%=post._id%>'>Read More</a>
     </p>
   
     <!-- content.substring(0,100) is because to show only 100 charecter of over blog content -->
